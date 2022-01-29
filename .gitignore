@@ -1,0 +1,7 @@
+*.o
+.DS_Store
+main.c
+*tester*
+*.out
+*.a
+
