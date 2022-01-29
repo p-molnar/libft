@@ -6,30 +6,29 @@
 /*   By: pmolnar <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:09 by pmolnar       #+#    #+#                 */
-/*   Updated: 2021/11/08 20:09:25 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/29 22:34:18 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#define CHAR_PLUS '+'
+#define CHAR_MINUS '-'
+#define CHAR_ZERO '0'
 
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
+	int			num;
+	int			coeff;
+	const int	sign[2] = {1, -1};
 
-	res = 0;
-	sign = 1;
+	num = 0;
+	coeff = 1;
 	while (*str && ft_isspace(*str))
 		str++;
-	if (*str && (*str == '+' || *str == '-'))
-	{
-		sign = 1 - 2 * (*str == '-');
-		str++;
-	}
+	if (*str && (*str == CHAR_PLUS || *str == CHAR_MINUS))
+		coeff = sign[(*str++ == CHAR_MINUS)];
 	while (*str && ft_isdigit(*str))
-	{
-		res = 10 * res + (*str - 48);
-		str++;
-	}
-	return (sign * res);
+		num = 10 * num + (*str++ - CHAR_ZERO);
+	return (coeff * num);
 }
