@@ -6,7 +6,7 @@
 #    By: pmolnar <marvin@codam.nl>                    +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2021/11/09 15:45:34 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/01/29 22:33:49 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,6 @@ bonus:
 
 clean:
 	rm -f $(OBJ) $(B_OBJ)
-
 
 fclean: clean
 	rm -f $(NAME)
