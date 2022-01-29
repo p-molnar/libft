@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memset.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: pmolnar <marvin@codam.nl>                    +#+                     */
+/*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:56 by pmolnar       #+#    #+#                 */
-/*   Updated: 2021/11/08 17:39:44 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

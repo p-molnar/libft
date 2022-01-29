@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strrchr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: pmolnar <marvin@codam.nl>                    +#+                     */
+/*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:52:33 by pmolnar       #+#    #+#                 */
-/*   Updated: 2021/11/08 12:11:38 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

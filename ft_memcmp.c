@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: pmolnar <marvin@codam.nl>                    +#+                     */
+/*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:51 by pmolnar       #+#    #+#                 */
-/*   Updated: 2021/11/09 15:51:53 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

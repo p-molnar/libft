@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstmap_bonus.c                                  :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: pmolnar <marvin@codam.nl>                    +#+                     */
+/*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:44 by pmolnar       #+#    #+#                 */
-/*   Updated: 2021/11/04 18:07:54 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
