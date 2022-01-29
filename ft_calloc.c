@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: pmolnar <marvin@codam.nl>                    +#+                     */
+/*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:19 by pmolnar       #+#    #+#                 */
-/*   Updated: 2021/11/08 12:25:00 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/29 23:23:52 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	total_size;
-	char	*ptr_obj;
+	size_t	obj_size;
+	void	*obj;
 
-	total_size = count * size;
-	ptr_obj = malloc(total_size);
-	if (!ptr_obj)
+	obj_size = count * size;
+	obj = malloc(obj_size);
+	if (!obj)
 		return (NULL);
-	ft_bzero(ptr_obj, total_size);
-	return ((void *)ptr_obj);
+	ft_bzero(obj, obj_size);
+	return (obj);
 }
