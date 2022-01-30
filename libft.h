@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 19:05:41 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/30 15:31:25 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/30 17:29:44 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int				ft_abs(int i);
 char			ft_dtoa(int d);
 size_t			ft_count(char *s, char c);
 size_t			ft_get_num_len(long long n);
+char			*ft_reverse_str(char *str);
 
 // 	Part 1 - Libc functions
 int				ft_isalpha(int c);
