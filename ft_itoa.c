@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:35 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/30 19:18:34 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 char	*ft_itoa(int n)
 {
-	char	*buf;
-	size_t	mem_size;
+	size_t	num_len;
+	size_t	i;
+	int		num_negative;
+	char	*str;
 
-	mem_size = ft_intlen(n) + ft_isnegative(n) + 1;
-	buf = ft_calloc(mem_size, sizeof(char));
-	if (!buf)
+	i = 0;
+	num_negative = ft_isnegative(n);
+	num_len = num_negative + ft_get_num_len(n);
+	str = ft_calloc((num_len + 1), sizeof(char));
+	if (!str)
 		return (NULL);
-	*buf = ft_isnegative(n) * '-';
-	if (!n)
-		*buf = '0';
+	if (n == 0)
+		str[i++] = '0';
+	if (num_negative)
+		str[i++] = '-';
 	while (n)
 	{
-		*(buf + ft_intlen(n) + \
-		ft_isnegative(n) - 1) = ft_dtoa(ft_abs(n % 10));
+		str[i] = ft_dtoa(ft_abs(n % 10));
 		n /= 10;
+		i++;
 	}
-	return (buf);
+	ft_reverse_str(&str[num_negative]);
+	return (str);
 }
