@@ -3,10 +3,10 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: pmolnar <marvin@codam.nl>                    +#+                      #
+#    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/01/29 22:33:49 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/01/30 15:27:25 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Werror -Wextra
 UTIL_SRC	=	ft_isupper.c		ft_islower.c		\
 				ft_isspace.c		ft_count.c			\
 				ft_dtoa.c			ft_abs.c			\
-				ft_isnegative.c		ft_intlen.c
+				ft_isnegative.c		ft_get_num_len.c
 
 PART1_SRC	= 	ft_isalpha.c		ft_isdigit.c		\
 				ft_isalnum.c		ft_isascii.c		\
