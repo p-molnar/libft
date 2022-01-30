@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:21 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/30 17:49:03 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/30 18:03:12 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@
 
 char	ft_dtoa(int d)
 {
-	return (d + CHAR_ZERO);
+	if (d >= 0 && d <= 9)
+		return (d + CHAR_ZERO);
+	return ('\0');
 }
