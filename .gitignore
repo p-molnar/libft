@@ -1,7 +1,7 @@
-*.o
 .DS_Store
 main.c
+*.pdf
+*.o
 *test*
 *.out
 *.a
-
