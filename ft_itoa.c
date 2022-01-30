@@ -6,9 +6,21 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:35 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/30 19:18:34 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/30 19:28:11 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	NAME
+//		ft_itoa -- converts integer to string
+//
+//	DESCRIPTION
+//		ft_itoa() function converts a signed integer to its corresponding ascii
+//		sequence, i.e., a string.
+//
+//	RETURN VALUES
+//		ft_itoa() function returns a stringified verison of the 
+//		integer passed in. If memory allocation fails, the function 
+//		returns NULL
 
 #include "libft.h"
 
