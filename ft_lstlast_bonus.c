@@ -6,9 +6,18 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:43 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/31 20:57:29 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	NAME
+//		ft_lstlast -- gets the last node of the list 
+//
+//	DESCRIPTION
+//		Returns the last node of the list.
+//
+//	RETURN VALUES
+//		the last node of the linked list
 
 #include "libft.h"
 

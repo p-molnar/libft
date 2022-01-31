@@ -6,9 +6,18 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:48 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/01/31 21:11:02 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	NAME
+//		ft_lstsize -- gives the number of nodes in a linked list 
+//
+//	DESCRIPTION
+//		Counts the number of nodes in a list.
+//
+//	RETURN VALUES
+//		The length of the list
 
 #include "libft.h"
 
