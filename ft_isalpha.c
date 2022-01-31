@@ -12,11 +12,11 @@
 
 //	NAME
 //		isalpha -- alphabetic character test
-
+//
 //	DESCRIPTION
 //		The isalpha() function tests for any character for which isupper(3) or
 //		islower(3) is true.
-
+//
 //	RETURN VALUES
 //		The isalpha() function returns zero if the character tests false and
 //		returns non-zero if the character tests true.
