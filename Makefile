@@ -6,7 +6,7 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/01/30 17:31:58 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/02/16 22:57:41 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,11 @@ BONUS_SRC	=	ft_lstnew_bonus.c			ft_lstadd_front_bonus.c	\
 				ft_lstclear_bonus.c			ft_lstiter_bonus.c		\
 				ft_lstmap_bonus.c
 
-SRC = $(PART1_SRC) $(PART2_SRC) $(UTIL_SRC)
+SRC =	$(addprefix libc/, $(PART1_SRC)) \
+		$(addprefix libc/, $(PART2_SRC))	\
+		$(addprefix additional/, $(UTIL_SRC))
 OBJ = $(SRC:.c=.o)
-B_OBJ = $(BONUS_SRC:.c=.o)
+B_OBJ = $(addprefix linked_list/, $(BONUS_SRC:.c=.o))
 
 NAME = libft.a
 
@@ -57,7 +59,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I ./ -c $< -o $@
 
 bonus:
 	@make OBJ="$(B_OBJ)" all
