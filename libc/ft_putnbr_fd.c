@@ -6,9 +6,18 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:52:01 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/02/23 16:41:53 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	NAME
+//		putnbr -- output a number to a specified stream
+//
+//	DESCRIPTION
+//		Outputs the integer ’n’ to the given file descriptor.
+//
+//	RETURN VALUES
+//		The function does not have a return value
 
 #include "libft.h"
 
