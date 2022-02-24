@@ -6,9 +6,23 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:52:05 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/02/24 23:46:22 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	NAME
+//		ft_split -- splits up a string at a given delimeter
+//
+//	DESCRIPTION
+//		Allocates (with malloc(3)) and returns an array
+//		of strings obtained by splitting ’s’ using the
+//		character ’c’ as a delimiter.  The array must end
+//		with a NULL pointer.
+//
+//	RETURN VALUES
+//		The array of new strings resulting from the split.
+//		NULL if the allocation fails.
+
 
 #include <stdlib.h>
 #include "libft.h"
