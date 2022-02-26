@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:52:10 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/02/25 23:41:11 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/02/26 12:15:21 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 //		subsequently be used as an argument to the function free(3).
 //		
 //		If insufficient memory is available, NULL is returned.
-
-
 
 #include "libft.h"
 
