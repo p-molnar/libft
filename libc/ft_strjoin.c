@@ -6,9 +6,20 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:52:13 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/29 22:58:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/02/27 23:59:58 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	NAME
+//		ft_strjoin -- joins two strings
+//	
+//	DESCRIPTION
+//		Allocates (with malloc(3)) and returns a new
+//		string, which is the result of the concatenation
+//		of ’s1’ and ’s2’.
+//	
+//	RETURN VALUE
+//		ft_strjoin, return the joined string. NULL if the allocation fails.
 
 #include "libft.h"
 
