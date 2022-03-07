@@ -6,7 +6,7 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/03/07 13:31:58 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/03/07 18:35:24 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ UTIL_SRC	=	ft_isupper.c		ft_islower.c		\
 				ft_dtoa.c			ft_abs.c			\
 				ft_isnegative.c		ft_get_num_len.c	\
 				ft_reverse_str.c	ft_atod.c			\
-				ft_atof.c								\
+				ft_atof.c			ft_int_max.c		\
 
 PART1_SRC	= 	ft_isalpha.c		ft_isdigit.c		\
 				ft_isalnum.c		ft_isascii.c		\
