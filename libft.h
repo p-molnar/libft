@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 19:05:41 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/30 17:29:44 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/03/07 13:29:43 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define CHAR_PLUS '+'
 # define CHAR_MINUS '-'
 # define CHAR_ZERO '0'
+# define CHAR_DOT '.'
 
 // struct prototype for linked list
 typedef struct s_list
@@ -33,6 +34,8 @@ int				ft_isspace(int c);
 int				ft_isnegative(int n);
 int				ft_abs(int i);
 char			ft_dtoa(int d);
+int				ft_atod(char c);
+double			ft_atof(const char *str);
 size_t			ft_count(char *s, char c);
 size_t			ft_get_num_len(long long n);
 char			*ft_reverse_str(char *str);
