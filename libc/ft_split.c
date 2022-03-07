@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:52:05 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/02/24 23:46:22 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/03/07 14:16:52 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 //	RETURN VALUES
 //		The array of new strings resulting from the split.
 //		NULL if the allocation fails.
-
 
 #include <stdlib.h>
 #include "libft.h"
