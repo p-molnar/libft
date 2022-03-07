@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 17:51:21 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/30 18:03:12 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/03/07 13:03:44 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 //		dtoa -- converts digit to ascii character
 
 //	DESCRIPTION
-//		ft_dtoa() function converts a digit to its corresponding ascii character
+//		ft_dtoa() function attempts to convert an integer to its 
+//		corresponding ascii value.
 
 //	RETURN VALUES
-//		if the conversion successfull then the function returns the converted 
-//		charater, otherwise, a null terminator.
+//		if the conversion is successful then the function returns the converted 
+//		value as character, otherwise, a null terminator.
 
 #include "libft.h"
 
