@@ -6,12 +6,16 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/03/07 18:35:24 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/03/31 11:59:55 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+GREEN		=	\033[0;32m
+YELLOW		=	\033[1;33m
+DEF			=	\033[0m
+
+CC			= 	gcc
+CFLAGS		= 	-Wall -Werror -Wextra
 
 UTIL_SRC	=	ft_isupper.c		ft_islower.c		\
 				ft_isspace.c		ft_count.c			\
@@ -46,30 +50,34 @@ BONUS_SRC	=	ft_lstnew_bonus.c			ft_lstadd_front_bonus.c	\
 				ft_lstclear_bonus.c			ft_lstiter_bonus.c		\
 				ft_lstmap_bonus.c
 
-SRC =	$(addprefix libc/, $(PART1_SRC)) \
-		$(addprefix libc/, $(PART2_SRC))	\
-		$(addprefix additional/, $(UTIL_SRC))
-OBJ = $(SRC:.c=.o)
-B_OBJ = $(addprefix linked_list/, $(BONUS_SRC:.c=.o))
+SRC 		=	$(addprefix libc/, $(PART1_SRC)) \
+				$(addprefix libc/, $(PART2_SRC))	\
+				$(addprefix additional/, $(UTIL_SRC))
 
-NAME = libft.a
+OBJ 		= 	$(SRC:.c=.o)
+
+B_OBJ 		= 	$(addprefix linked_list/, $(BONUS_SRC:.c=.o))
+
+NAME 		= 	libft.a
 
 all: $(NAME)
 
 $(NAME): $(OBJ) 
 	ar rcs $(NAME) $(OBJ)
-
+	@echo "$(GREEN)$(NAME) successfully compiled\n$(DEF)"
 %.o: %.c
-	$(CC) $(CFLAGS) -I ./ -c $< -o $@
+	$(CC) $(CFLAGS) -I ./ -c $^ -o $@
 
 bonus:
 	@make OBJ="$(B_OBJ)" all
 
 clean:
 	rm -f $(OBJ) $(B_OBJ)
+	@echo "$(GREEN)Object files are deleted\n$(DEF)"
 
 fclean: clean
 	rm -f $(NAME)
+	@echo "$(GREEN)$(NAME) is deleted\n$(DEF)"
 
 re: fclean all
 
