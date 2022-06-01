@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_int_max.c                                       :+:    :+:            */
+/*   ft_min_i.c                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/07 18:34:03 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/03/07 18:34:33 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/06/01 15:10:25 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdarg.h>
 
-int	ft_int_max(size_t arg_count, ...)
+int	ft_min_i(size_t arg_count, ...)
 {
 	size_t	i;
 	va_list	args;
 	int		arg;
-	int		max;
+	int		min;
 
 	i = 0;
 	va_start(args, arg_count);
-	max = va_arg(args, int);
+	min = va_arg(args, int);
 	while (i < (arg_count - 1))
 	{
 		arg = va_arg(args, int);
-		if (arg > max)
-			max = arg;
+		if (arg < min)
+			min = arg;
 		i++;
 	}	
 	va_end(args);
-	return (max);
+	return (min);
 }
