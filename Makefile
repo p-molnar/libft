@@ -6,7 +6,7 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/07/11 00:52:36 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/07/11 00:56:01 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@echo compiling: $<
 
 clean:
-	@rm -f $(P_OBJS)
+	@rm -rf $(P_OBJS) $(OBJ_DIR)
 	@echo $(GREEN)object file\(s\) removed$(DEF)
 
 
