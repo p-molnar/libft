@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_abs.c                                           :+:    :+:            */
+/*   ft_atod.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/24 23:20:01 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/01/30 13:05:43 by pmolnar       ########   odam.nl         */
+/*   Created: 2021/11/04 17:51:21 by pmolnar       #+#    #+#                 */
+/*   Updated: 2022/07/10 21:13:42 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-//	NAME																		
-//   	abs -- integer absolute value function
-//
-// 	DESCRIPTION
-//    	The abs() function computes the absolute value of the integer i.
-//
-// 	RETURN VALUES
-//    	The abs() function returns the absolute value.
+//	NAME
+//		ft_atod -- convert ascii char to digit
 
-int	ft_abs(int i)
+//	DESCRIPTION
+//		ft_atod() function attempts to convert a digit expressed in ascii 
+//		to its corresponding integer value
+
+//	RETURN VALUES
+//		if the conversion is successful then the function returns the 
+//		converted integer, otherwise -1.
+
+#include "libft.h"
+
+int	ft_atod(char c)
 {
-	return (i * ((i > 0) - (i < 0)));
+	if (c >= '0' && c <= '9')
+		return (c - CHAR_ZERO);
+	return (-1);
 }
