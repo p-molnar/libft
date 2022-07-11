@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/24 23:20:01 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/07/10 21:24:32 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/07/11 20:38:55 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 //    	The abs() function returns the absolute value.
 
 int	ft_abs(int i)
+{
+	return (i * ((i > 0) - (i < 0)));
+}
+
+double	ft_fabs(double i)
 {
 	return (i * ((i > 0) - (i < 0)));
 }
