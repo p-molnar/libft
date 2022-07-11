@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 19:05:41 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/06/01 15:50:11 by pmolnar       ########   odam.nl         */
+/*   Updated: 2022/07/11 20:43:33 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,17 @@ int				ft_islower(int c);
 int				ft_isspace(int c);
 int				ft_isnegative(int n);
 int				ft_abs(int i);
+double			ft_fabs(double i);
 char			ft_dtoa(int d);
 int				ft_atod(char c);
 double			ft_atof(const char *str);
 size_t			ft_count(char *s, char c);
 size_t			ft_get_num_len(long long n);
 char			*ft_reverse_str(char *str);
-int				ft_max_i(size_t arg_count, ...);
-int				ft_min_i(size_t arg_count, ...);
-double			ft_max_f(size_t arg_count, ...);
-double			ft_min_f(size_t arg_count, ...);
+int				ft_max(size_t arg_count, ...);
+int				ft_min(size_t arg_count, ...);
+double			ft_fmax(size_t arg_count, ...);
+double			ft_fmin(size_t arg_count, ...);
 
 // 	Part 1 - Libc functions
 int				ft_isalpha(int c);
