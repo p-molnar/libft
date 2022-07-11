@@ -6,7 +6,7 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/07/11 01:00:25 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/07/11 20:49:19 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ LIST		=	ft_lstadd_back_bonus.c	ft_lstadd_front_bonus.c		\
 MATH_DIR	=	math/
 P_MATH		=	$(addprefix $(MATH_DIR), $(MATH))
 MATH		=	ft_abs.c				ft_get_num_len.c			\
-				ft_int_max.c			ft_isnegative.c				\
+				ft_isnegative.c			ft_max.c					\
+				ft_min.c											\
 
 MEMORY_DIR	=	memory/
 P_MEMORY	=	$(addprefix $(MEMORY_DIR), $(MEMORY))
