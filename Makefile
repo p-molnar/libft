@@ -6,21 +6,28 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2022/07/11 20:49:19 by pmolnar       ########   odam.nl          #
+#    Updated: 2022/07/17 23:15:03 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
+# COMPILER CONFIG
 CC			=	gcc
 CFLAGS		+=	-Wall -Werror -Wextra
 CFLAGS		+=	-g
 CFLAGS		+=	-fsanitize=address
 INCLUDE		=	-I include
 
-RED			=	"\033[0;31m"
-GREEN		=	"\033[0;32m"
-YELLOW		=	"\033[1;33m"
-DEF			=	"\033[0m"
+# PRINT FORMATTING
+RED				=	\033[0;31m
+GREEN			=	\033[0;32m
+YELLOW			=	\033[1;33m
+BOLD			=	\033[1m
+DEF				=	\033[0m
+SPACE_W 		= 	%-40s
+STATUS_W		=	%-10s
+STATUS_FMT		=	$(BOLD)$(STATUS_W)$(DEF) $(SPACE_W)
 
+# SOURCE FILES
 ASCII_DIR	=	ascii/
 P_ASCII		=	$(addprefix $(ASCII_DIR), $(ASCII))
 ASCII		=	ft_isalnum.c		ft_isalpha.c					\
@@ -69,6 +76,7 @@ STRING		=	ft_atod.c				ft_atof.c					\
 				ft_strrchr.c			ft_strtrim.c				\
 				ft_substr.c											\
 
+# ARCHIVE
 NAME		=	libft.a
 SRC_DIR		=	src/
 SRC			=	$(P_ASCII) $(P_LIST) $(P_MATH) $(P_MEMORY) $(P_PUT)	\
@@ -78,27 +86,32 @@ OBJ_DIR		=	obj/
 OBJS		=	$(SRC:.c=.o)
 P_OBJS		=	$(addprefix obj/, $(OBJS))
 
-all: $(NAME)
+all:	$(NAME)
+	@printf "$(GREEN)$(NAME) is created at $(shell pwd)$(DEF)\n"
 
-$(NAME): $(P_OBJS) 
-	@ar rcs $(NAME) $(P_OBJS)
-	@echo $(GREEN)$(NAME) archive created: $(shell pwd)$(DEF)
+$(NAME):	$(P_OBJS) 
+	@printf "$(STATUS_FMT)" "building" "$(NAME)"
+	@ar rcs $(NAME) $(P_OBJS)	
+	@printf "[$(GREEN)DONE$(DEF)]\n"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+$(OBJ_DIR)%.o:	$(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
+	@printf "$(STATUS_FMT)" "building" "$<"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-	@echo compiling: $<
+	@printf "[$(GREEN)DONE$(DEF)]\n"
 
 clean:
 	@rm -rf $(P_OBJS) $(OBJ_DIR)
-	@echo $(GREEN)object file\(s\) removed$(DEF)
+	@printf "$(STATUS_FMT)" "removing" "$(OBJ_DIR)"
+	@printf "[$(GREEN)DONE$(DEF)]\n"
 
 
-fclean: clean
+fclean:	clean
 	@rm -f $(NAME)
-	@echo $(GREEN)$(NAME) removed$(DEF)
+	@printf "$(STATUS_FMT)" "removing" "$(NAME)"
+	@printf "[$(GREEN)DONE$(DEF)]\n"
 
-re: fclean all
-	@echo $(GREEN)libft recompiled$(DEF)
+re:	fclean
+	@make all
 
 .PHONY: all clean fclean re
