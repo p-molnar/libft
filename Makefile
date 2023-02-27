@@ -6,7 +6,7 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2023/02/21 10:39:46 by pmolnar       ########   odam.nl          #
+#    Updated: 2023/02/27 16:48:45 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ MEMORY		=	ft_bzero.c				ft_calloc.c					\
 				ft_memset.c											\
 
 PUT_DIR		=	put/
-P_PUT		=	$(addprefix$(PUT_DIR), $(PUT))
+P_PUT		=	$(addprefix $(PUT_DIR), $(PUT))
 PUT			=	ft_putchar_fd.c			ft_putendl_fd.c				\
 				ft_putnbr_fd.c			ft_putstr_fd.c				\
 
