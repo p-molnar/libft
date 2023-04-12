@@ -6,17 +6,17 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2023/02/27 16:51:35 by pmolnar       ########   odam.nl          #
+#    Updated: 2023/04/12 14:46:24 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 # COMPILER CONFIG
 CC			=	gcc
 CFLAGS		+=	-Wall -Werror -Wextra
-# CFLAGS		+=	-g
 INCLUDE		=	-I inc
 
 # PRINT FORMATTING
+P_NAME			=	[libft]
 RED				=	\033[0;31m
 GREEN			=	\033[0;32m
 YELLOW			=	\033[1;33m
@@ -24,7 +24,8 @@ BOLD			=	\033[1m
 DEF				=	\033[0m
 SPACE_W 		= 	%-40s
 STATUS_W		=	%-10s
-STATUS_FMT		=	$(BOLD)$(STATUS_W)$(DEF) $(SPACE_W)
+P_NAME_W		=	%-10s
+STATUS_FMT		=	$(BOLD)$(P_NAME_W) $(DEF) $(STATUS_W) $(SPACE_W)
 
 # SOURCE FILES
 ASCII_DIR	=	ascii/
@@ -89,25 +90,28 @@ all:	$(NAME)
 	@printf "$(GREEN)$(NAME) is created at $(shell pwd)$(DEF)\n"
 
 $(NAME):	$(P_OBJS) 
-	@printf "$(STATUS_FMT)" "building" "$(NAME)"
+	@printf "$(STATUS_FMT)" "$(P_NAME)" "building" "$(NAME)"
 	@ar rcs $(NAME) $(P_OBJS)	
 	@printf "[$(GREEN)DONE$(DEF)]\n"
 
 $(OBJ_DIR)%.o:	$(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
-	@printf "$(STATUS_FMT)" "building" "$<"
+	@printf "$(STATUS_FMT)" "$(P_NAME)" "building" "$<"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 	@printf "[$(GREEN)DONE$(DEF)]\n"
 
 clean:
+	@printf "$(STATUS_FMT)" "$(P_NAME)" "removing" "$(OBJ_DIR)"
 	@rm -rf $(P_OBJS) $(OBJ_DIR)
-	@printf "$(STATUS_FMT)" "removing" "$(OBJ_DIR)"
 	@printf "[$(GREEN)DONE$(DEF)]\n"
 
-
-fclean:	clean
+fclean:
+	@printf "$(STATUS_FMT)" "$(P_NAME)" "removing" "$(NAME)"
 	@rm -f $(NAME)
-	@printf "$(STATUS_FMT)" "removing" "$(NAME)"
+	@printf "[$(GREEN)DONE$(DEF)]\n"
+
+	@printf "$(STATUS_FMT)" "$(P_NAME)" "removing" "$(OBJ_DIR)"
+	@rm -rf $(P_OBJS) $(OBJ_DIR)
 	@printf "[$(GREEN)DONE$(DEF)]\n"
 
 re:	fclean
