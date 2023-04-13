@@ -6,7 +6,7 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2023/04/12 14:46:24 by pmolnar       ########   odam.nl          #
+#    Updated: 2023/04/13 11:12:06 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ STRING		=	ft_atod.c				ft_atof.c					\
 				ft_strlen.c				ft_strmapi.c				\
 				ft_strncmp.c			ft_strnstr.c				\
 				ft_strrchr.c			ft_strtrim.c				\
-				ft_substr.c											\
+				ft_substr.c				ft_strconcat.c				\
 
 # ARCHIVE
 NAME		=	libft.a
