@@ -6,13 +6,13 @@
 #    By: pmolnar <pmolnar@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/04 17:46:44 by pmolnar       #+#    #+#                  #
-#    Updated: 2023/04/13 11:12:06 by pmolnar       ########   odam.nl          #
+#    Updated: 2023/04/16 17:30:20 by pmolnar       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 # COMPILER CONFIG
 CC			=	gcc
-CFLAGS		+=	-Wall -Werror -Wextra
+CFLAGS		+=	-Wall -Werror -Wextra -g
 INCLUDE		=	-I inc
 
 # PRINT FORMATTING
@@ -55,7 +55,7 @@ P_MEMORY	=	$(addprefix $(MEMORY_DIR), $(MEMORY))
 MEMORY		=	ft_bzero.c				ft_calloc.c					\
 				ft_memchr.c				ft_memcmp.c					\
 				ft_memcpy.c				ft_memmove.c				\
-				ft_memset.c											\
+				ft_memset.c				ft_char_realloc.c			\
 
 PUT_DIR		=	put/
 P_PUT		=	$(addprefix $(PUT_DIR), $(PUT))
@@ -75,6 +75,7 @@ STRING		=	ft_atod.c				ft_atof.c					\
 				ft_strncmp.c			ft_strnstr.c				\
 				ft_strrchr.c			ft_strtrim.c				\
 				ft_substr.c				ft_strconcat.c				\
+				get_next_line.c										\
 
 # ARCHIVE
 NAME		=	libft.a
