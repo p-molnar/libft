@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 19:05:41 by pmolnar       #+#    #+#                 */
-/*   Updated: 2022/07/11 20:43:33 by pmolnar       ########   odam.nl         */
+/*   Updated: 2023/04/16 17:21:25 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
 size_t			ft_strlen(const char *str);
+char			*get_next_line(int fd);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
@@ -69,6 +70,7 @@ char			*ft_strnstr(const char *haystack, const char *needle, \
 							size_t len);
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
+char			*ft_char_realloc(char *ptr, size_t size);
 char			*ft_strdup(const char *s1);
 
 //	Part 2 - Additional functions
