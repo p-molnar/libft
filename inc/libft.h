@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 19:05:41 by pmolnar       #+#    #+#                 */
-/*   Updated: 2023/04/16 17:21:25 by pmolnar       ########   odam.nl         */
+/*   Updated: 2023/04/17 11:25:04 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+char			*strconcat(int n, ...);
 
 //	Bonus part
 t_list			*ft_lstnew(void *content);
