@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/16 13:40:27 by pmolnar       #+#    #+#                 */
-/*   Updated: 2023/04/24 14:03:01 by pmolnar       ########   odam.nl         */
+/*   Updated: 2023/04/24 21:55:49 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_realloc(void *obj, size_t obj_size,
 {
 	void	*new_ptr;
 
-	new_ptr = ft_calloc(new_size, new_size);
+	new_ptr = ft_calloc(new_size, obj_size * new_size);
 	if (obj == NULL)
 		return (new_ptr);
 	if (new_size == 0)
