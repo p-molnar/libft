@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/16 13:40:27 by pmolnar       #+#    #+#                 */
-/*   Updated: 2023/04/24 21:57:19 by pmolnar       ########   odam.nl         */
+/*   Updated: 2023/04/25 09:30:28 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_realloc(void *obj, size_t obj_size,
 	else
 	{
 		if (new_size <= curr_mem_size * obj_size)
-			ft_memcpy(new_ptr, obj, new_size);
+			ft_memcpy(new_ptr, obj, new_size * obj_size);
 		else
 			ft_memcpy(new_ptr, obj, curr_mem_size);
 	}
