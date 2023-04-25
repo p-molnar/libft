@@ -6,7 +6,7 @@
 /*   By: pmolnar <pmolnar@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/04 19:05:41 by pmolnar       #+#    #+#                 */
-/*   Updated: 2023/04/24 13:57:36 by pmolnar       ########   odam.nl         */
+/*   Updated: 2023/04/25 09:42:08 by pmolnar       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,7 @@ char			*ft_strnstr(const char *haystack, const char *needle, \
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_char_realloc(char *ptr, size_t size);
-void			*ft_realloc(void *obj, size_t obj_size, size_t curr_size,
-					size_t new_size);
+void			*ft_realloc(void *obj, size_t obj_size, size_t new_size);
 char			*ft_strdup(const char *s1);
 
 //	Part 2 - Additional functions
