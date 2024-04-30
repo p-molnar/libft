@@ -1,6 +1,6 @@
 # Libft (Custom C Library and Linked List Operations)
 
-Welcome to the Libft project! This repository contains a reimplementation of the standard C library from scratch, along with additional functionality for linked list operations.
+Welcome to the Libft project! This repository contains a minimalistic reimplementation of the [C Standard Library](https://en.wikipedia.org/wiki/C_standard_library) from scratch, along with additional functionality for linked list operations.
 
 ## Introduction
 
