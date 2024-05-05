@@ -31,7 +31,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/custom-c-library.git
+   git clone https://github.com/p-molnar/libft.git
    ```
 
 2. Compile the source code via Makefile into a `libft.a` archive:
